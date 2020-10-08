@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url('bg2.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .car {
+            width: 65px;
+            height: 95px;
+            position: absolute;
+            bottom: 120px;
+            background-image: url('car.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .Enemy {
+            width: 65px;
+            height: 95px;
+            position: absolute;
+            bottom: 120px;
+            background-image: url('enemycar.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .gameArea {
+            width: 400px;
+            height: 100vh;
+            background-color: #2d3436;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-left: 7px dashed #c8d6e5;
+            border-right: 7px dashed #c8d6e5;
+        }
+
+        .lines {
+            width: 10px;
+            height: 100px;
+            position: absolute;
+            background: white;
+            margin-left: 195px;
+        }
+
+        .score {
+            position: absolute;
+            width: 300px;
+            /* height: 100px; */
+            line-height: 100px;
+            left: 40px;
+            top: 15px;
+            font-family: 'Ranchers', cursive;
+            text-align: center;
+            background: #10ac84;
+            color: white;
+            font-size: 2.5em;
+            box-shadow: 0px 5px 5px black;
+            border-radius: 50px; 
+        }
+
+        .theme {
+            position: absolute;
+            width: 300px;
+            /* height: 100px; */
+            line-height: 100px;
+            left: 40px;
+            top: 150px;
+            font-family: 'Ranchers', cursive;
+            text-align: center;
+            background: #10ac84;
+            color: white;
+            font-size: 2.5em;
+            box-shadow: 0px 5px 5px black;
+            border-radius: 50px; 
+            cursor: pointer;
+        }
+
+        .startScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ee5253;
+            color: white;
+            border: 1px solid #ff6b6b;
+            z-index: 1;
+            margin: auto;
+            padding: 15px;
+            width: 50%;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            letter-spacing: 1mm;
+            word-spacing: 3mm;
+            font-family: 'Londrina Solid', cursive;
+            box-shadow: 0px 7px 7px black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game ">
+            <div class="score"></div>
+            <div class="theme"></div>
+            <div class="startScreen">
+                <p> Press here to start <br>
+                    Use Arrow keys to move <br>
+                    If you hit another car , You will Lose
+                </p>
+            </div>
+            <div class="gameArea"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
